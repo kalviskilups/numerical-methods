@@ -45,14 +45,14 @@ if __name__ == "__main__":
     # Calculate the period for alpha_0 = pi/3
     T = calculate_period(alpha_0)
 
-    t_values = np.linspace(0, T, 30)
+    t_values = np.linspace(0, 10, 30)
 
     # Compute the angular displacement alpha(t) over time
     alpha_values = alpha_t(t_values, alpha_0, T)
 
     # Interpolation using cubic splines to create a smooth line
     interpolator = interp1d(t_values, alpha_values, kind='cubic')
-    t_smooth = np.linspace(0, T, 1000)
+    t_smooth = np.linspace(0, 10, 1000)
     alpha_smooth = interpolator(t_smooth)
 
     # Plot the calculated points and the interpolated line
