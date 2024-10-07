@@ -29,6 +29,7 @@ def calculate_period(alpha_0) -> float:
     T = 4 * np.sqrt(L / g) * integral_value
     return T
 
+
 if __name__ == "__main__":
 
     # Constants

@@ -34,6 +34,7 @@ def alpha_t(t, alpha_0, T):
 if __name__ == "__main__":
 
     # Constants
+    N_values = [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576, 2097152]
 
     # Acceleration due to gravity (m/s^2)
     g = 9.81
@@ -45,14 +46,14 @@ if __name__ == "__main__":
     # Calculate the period for alpha_0 = pi/3
     T = calculate_period(alpha_0)
 
-    t_values = np.linspace(0, 10, 30)
+    t_values = np.linspace(0, 30, 500)
 
     # Compute the angular displacement alpha(t) over time
     alpha_values = alpha_t(t_values, alpha_0, T)
 
     # Interpolation using cubic splines to create a smooth line
     interpolator = interp1d(t_values, alpha_values, kind='cubic')
-    t_smooth = np.linspace(0, 10, 1000)
+    t_smooth = np.linspace(0, 30, 1000)
     alpha_smooth = interpolator(t_smooth)
 
     # Plot the calculated points and the interpolated line
