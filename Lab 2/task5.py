@@ -30,4 +30,4 @@ h_near_1 = calculate_h(1.01)
 print(f"Augstuma starpība h, kad L/s -> 1: {h_near_1:.6f} vienībās")
 
 h_actual = calculate_h(1.3)
-print(f"Augstuma starpība h (starp piekāršanas punktu un zemāko punktu) = {h:.6f} vienībās")
+print(f"Augstuma starpība h (starp piekāršanas punktu un zemāko punktu) = {h_actual:.6f} vienībās")
