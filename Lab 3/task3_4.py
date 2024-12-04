@@ -8,7 +8,7 @@ xi_max = 10
 N = 100
 
 xi = np.linspace(xi_min, xi_max, N)
-h = xi[1] - xi[0]
+h = (xi_max - xi_min) / (N - 1)
 
 H = np.zeros((N, N))
 
