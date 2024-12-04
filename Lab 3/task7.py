@@ -25,7 +25,7 @@ print(eigenenergies_cm)
 # Vērtības no 3. uzdevuma
 harmonic_oscillator_energies = [0.4987, 1.4936, 2.4833, 3.4678, 4.4471]
 
-scaling_factor_cm = (hbar * omega) / cm_to_J  # Convert to cm^-1
+scaling_factor_cm = (hbar * omega) / cm_to_J
 harmonic_oscillator_energies_cm = [
     e * scaling_factor_cm for e in harmonic_oscillator_energies
 ]
